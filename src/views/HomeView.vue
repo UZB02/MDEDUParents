@@ -42,9 +42,9 @@ import { ref, onMounted } from 'vue'
 import ProgressSpinner from 'primevue/progressspinner'
 import api from '@/utils/api'
 
-import ChildCard from '../components/parent/ChildCard.vue'
-import PaymentsDialog from '../components/parent/PaymentsDialog.vue'
-import AttendanceDialog from '../components/parent/AttendanceDialog.vue'
+import ChildCard from '../components/Parent/ChildCard.vue'
+import PaymentsDialog from '../components/Parent/PaymentsDialog.vue'
+import AttendanceDialog from '../components/Parent/AttendanceDialog.vue'
 
 const loading = ref(true)
 const children = ref([])
