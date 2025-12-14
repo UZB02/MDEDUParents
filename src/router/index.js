@@ -13,13 +13,13 @@ const routes = [
   {
     path: '/test/:token',
     name: 'TestView',
-    component: () => import('../../src/views/Test/TestView.vue'),
+    component: () => import('../views/Test/TestView.vue'),
     meta: { layout: AuthLayout }, // **requiresAuth yo‘q**, istisno
   },
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../../src/views/Login/LoginView.vue'),
+    component: () => import('../views/Login/LoginView.vue'),
     meta: { layout: AuthLayout },
   },
   // boshqa sahifalar
