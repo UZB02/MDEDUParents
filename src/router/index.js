@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/Login/LoginView.vue'),
+    component: () => import('../views/Login/loginView.vue'),
     meta: { layout: AuthLayout },
   },
   // boshqa sahifalar
