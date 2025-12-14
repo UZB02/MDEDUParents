@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppLayout from '../layouts/AppLayout.vue'
 import AuthLayout from '../layouts/AuthLayout.vue'
 import HomeView from '../views/HomeView.vue'
+import LoginView from '../views/Login/loginView.vue'
 
 const routes = [
   {
@@ -19,7 +20,7 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/Login/loginView.vue'),
+    component: LoginView,
     meta: { layout: AuthLayout },
   },
   // boshqa sahifalar
