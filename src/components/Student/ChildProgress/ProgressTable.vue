@@ -69,20 +69,7 @@ watch(() => props.studentId, fetchProgresses);
         </Column>
 
         <!-- Fan -->
-        <Column field="subject" header="📚 Fan" sortable>
-          <template #body="{ data }">
-            <div class="flex items-center gap-2">
-              <div class="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center">
-                <span class="text-blue-600 text-xs font-bold">
-                  {{ data.subject?.charAt(0) }}
-                </span>
-              </div>
-              <span class="font-medium text-slate-800">
-                {{ data.subject }}
-              </span>
-            </div>
-          </template>
-        </Column>
+       
 
         <!-- Davomat -->
         <Column field="attendanceRate" header="👥 Davomat" sortable>

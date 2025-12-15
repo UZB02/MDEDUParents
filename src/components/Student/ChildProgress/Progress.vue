@@ -1,33 +1,5 @@
 <template>
-  <div class="w-full px-3 sm:px-4 lg:px-0">
-    <!-- Ortga tugma -->
-    <button
-      @click="router.back()"
-      class="w-full sm:w-auto inline-flex items-center justify-center cursor-pointer
-             px-4 py-2 mb-4 text-sm font-medium text-gray-700 bg-white
-             border border-gray-300 rounded-lg hover:bg-gray-50
-             transition-colors duration-200"
-    >
-      <i class="pi pi-arrow-left mr-2"></i>
-      Ortga
-    </button>
-
-    <!-- Header -->
-    <div
-      class="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700
-             rounded-2xl p-4 sm:p-6 mb-6 text-white"
-    >
-      <div class="absolute inset-0 bg-black/10"></div>
-      <div class="relative z-10">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 tracking-tight">
-          O'quvchi yillik progressi
-        </h1>
-        <p class="text-blue-100 text-sm sm:text-base lg:text-lg font-medium">
-          Davomat va o'qituvchi baholarining tahlili
-        </p>
-      </div>
-    </div>
-
+  <div class="w-full ">
     <!-- Statistikalar -->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6 mb-6">
       <!-- Year selector -->

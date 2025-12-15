@@ -1,19 +1,30 @@
 <template>
-  <div class="w-full px-3 sm:px-4 lg:px-6 py-4">
+  <div class="w-full ">
     <!-- Header -->
     <div
       class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"
     >
-      <h1 class="text-xl sm:text-2xl font-bold">
-        👧 Farzand ma'lumotlari
-      </h1>
-
       <Button
         label="⬅ Orqaga"
         severity="secondary"
         class="w-full sm:w-auto"
         @click="router.back()"
       />
+    </div>
+       <!-- Header -->
+    <div
+      class="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700
+             rounded-2xl p-4 sm:p-6 mb-6 text-white"
+    >
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative z-10">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 tracking-tight">
+          {{ payments[0]?.studentId?.name }} {{ payments[0]?.studentId?.lastname }}
+        </h1>
+        <p class="text-blue-100 text-sm sm:text-base lg:text-lg font-medium">
+          Davomat va o'qituvchi baholarining tahlili
+        </p>
+      </div>
     </div>
 
     <!-- Progress -->
@@ -138,6 +149,7 @@ const fetchPayments = async () => {
   try {
     const { data } = await api.get(`/parents/payments/${studentId}`);
     payments.value = data || [];
+    console.log(data);
   } catch (err) {
     console.error(err);
   } finally {
