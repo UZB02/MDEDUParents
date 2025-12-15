@@ -111,6 +111,14 @@
         class="flex-1"
         @click="$emit('attendance', child.id)"
       />
+      <Button
+        label="Batafsil"
+        icon="pi pi-chart-bar"
+        severity="secondary"
+        outlined
+        class="flex-1"
+        @click="$router.push(`/parent/child/${child.id}`)"
+      />
     </div>
 
     <!-- Decorative gradient overlay -->

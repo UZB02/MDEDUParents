@@ -11,6 +11,12 @@ const routes = [
     meta: { layout: AppLayout, requiresAuth: true },
   },
   {
+    path: '/parent/child/:id',
+    name: 'ChildId',
+    component: () => import('../views/ChildId/ChildIdView.vue'),
+    meta: { layout: AppLayout, requiresAuth: true },
+  },
+  {
     path: '/test/:token',
     name: 'TestView',
     component: () => import('../views/Test/TestView.vue'),

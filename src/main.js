@@ -18,6 +18,9 @@ import Textarea from 'primevue/textarea'
 import Dropdown from 'primevue/dropdown'
 import Menu from 'primevue/menu'
 
+import Chart from 'primevue/chart'
+
+
 const app = createApp(App)
 
 app.use(PrimeVue, {
