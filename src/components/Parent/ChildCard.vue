@@ -13,8 +13,8 @@
           {{ child.name }} {{ child.lastname }}
         </h3>
         <Tag 
-          v-if="child.groups?.group" 
-          :value="child.groups.group.name" 
+          v-if="child?.group" 
+          :value="child.group.name" 
           severity="info"
           class="!bg-primary-100 !text-primary-700 !border-primary-200"
         />
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Group information -->
-    <div v-if="child.groups" class="space-y-3 mb-6">
+    <div v-if="child.group" class="space-y-3 mb-6">
       <!-- Schedule days -->
       <div class="flex items-start gap-3">
         <i class="pi pi-calendar text-surface-500 mt-1"></i>
@@ -30,7 +30,7 @@
           <p class="text-xs font-medium text-surface-500 mb-1">Dars kunlari</p>
           <div class="flex flex-wrap gap-1.5">
             <Tag 
-              v-for="day in child.groups.group.days" 
+              v-for="day in child.group.days" 
               :key="day"
               :value="day"
               severity="secondary"
@@ -47,11 +47,11 @@
           <p class="text-xs font-medium text-surface-500 mb-1">Dars vaqti</p>
           <div class="flex flex-wrap gap-1.5">
             <Tag 
-              :value="child.groups.group.startTime"
+              :value="child.group.startTime"
               severity="secondary"
               class="!text-xs !px-2 !py-1"
             />-<Tag 
-              :value="child.groups.group.endTime"
+              :value="child.group.endTime"
               severity="secondary"
               class="!text-xs !px-2 !py-1"
             />
@@ -65,20 +65,20 @@
         <div>
           <p class="text-xs font-medium text-surface-500">Oylik to'lov</p>
           <p class="text-lg font-bold text-surface-900">
-            {{ formatCurrency(child.groups.group.monthlyFee) }}
+            {{ formatCurrency(child.group.monthlyFee) }}
           </p>
         </div>
       </div>
 
       <!-- Teacher info -->
-      <div class="flex items-center gap-3">
+      <div v-for="teacher in child.group.teachers" :key="teacher"  class="flex items-center gap-3">
         <i class="pi pi-user text-surface-500"></i>
         <div class="w-full">
           <p class="text-xs font-medium text-surface-500">O'qituvchi</p>
           <p class="flex justify-between w-full">
            <span class="text-sm font-semibold text-surface-900">
-             {{ child.groups.group.teacher?.name }}
-             {{ child.groups.group.teacher?.lastname }}
+             {{ teacher.name }}
+             {{ teacher.lastname }}
            </span>
            <span>
              <Tag
@@ -86,7 +86,7 @@
                severity="success"
                value="Bog'lanish"
                class="cursor-pointer"
-               @click="callTeacher(child.groups.group.teacher?.phone)"
+               @click="callTeacher(teacher.phone)"
              />
            </span>
           </p>

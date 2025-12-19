@@ -11,8 +11,8 @@ const emit = defineEmits(["toggle"]);
 // Menu items
 const menuItems = [
   { label: "Dashboard", icon: "pi pi-home", to:'/' },
-  { label: "Fanlar", icon: "pi pi-book", to:'/subjects' },
-  { label: "Savollar", icon: "pi pi-file-pdf", to:'/tests' },
+  // { label: "Fanlar", icon: "pi pi-book", to:'/subjects' },
+  // { label: "Savollar", icon: "pi pi-file-pdf", to:'/tests' },
 ];
 
 // Reactive desktop flag
